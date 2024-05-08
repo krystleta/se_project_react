@@ -1,0 +1,32 @@
+.modal__container_type_image {
+  max-width: 498px;
+  border-radius: 16px;
+}
+
+.modal__image {
+  border-radius: 16px 16px 0 0;
+  max-width: 498px;
+}
+
+.modal__close_type_transparent {
+  background: url(/src/assets/close_button_transparent.png) no-repeat transparent;
+}
+
+.modal__footer {
+  font-family: 'CabinetGrotesk', Arial, sans-serif;
+  font-weight: 700;
+  padding: 0;
+  margin: 20px 32px 32px;
+}
+
+.modal__caption {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.modal__weather {
+  padding: 0;
+  margin: 12px 0;
+}
