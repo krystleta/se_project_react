@@ -6,8 +6,8 @@ const WeatherCard = ({ isDay, condition, temperature }) => {
 //const WeatherCard = ({ isDay="true", condition="clouds", temperature }) => {
 //const WeatherCard = ({ weatherData }) => {
   //console.log({"weatherdata": weatherData});
-  //console.log({"weatherdata": weatherData.condition});
-  //console.log({"isDay": weatherData.isDay});
+  console.log({"condition": condition});
+  console.log({"isDay": isDay});
 
   const img_src = weatherCardImages.filter((i) => {
      return i.isDay === isDay && i.condition.toLowerCase() === condition.toLowerCase();
