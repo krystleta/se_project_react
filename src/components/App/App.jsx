@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, act } from "react";
 import "./App.css";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
@@ -40,14 +40,16 @@ function App() {
   }, []);
 
   useEffect(() => {
+    if (!activeModal) return;
+
     const close = (e) => {
-      if (e.keyCode === 27) {
+      if (e.key === "Escape") {
         closeActiveModal();
       }
     };
     window.addEventListener("keydown", close);
     return () => window.removeEventListener("keydown", close);
-  }, []);
+  }, [activeModal]);
 
   return (
     <div className="page">
@@ -63,7 +65,7 @@ function App() {
         activeModal={activeModal}
         onClose={closeActiveModal}
       >
-        <label className="modal__label" htmlFor="item-name">
+        <label className="modal__label">
           Name{""}
           <input
             id="item-name"
@@ -77,7 +79,7 @@ function App() {
           />
           <span className="modal__error" id="item-name-error"></span>
         </label>
-        <label className="modal__label" htmlFor="item-image-url">
+        <label className="modal__label">
           Image{""}
           <input
             id="item-image-url"
@@ -91,7 +93,7 @@ function App() {
         </label>
         <fieldset className="modal__radio-buttons">
           <legend className="modal__legend">Select the weather type:</legend>
-          <label className="modal__input modal__label_type_radio" htmlFor="hot">
+          <label className="modal__input modal__label_type_radio">
             <input
               type="radio"
               id="hot"
@@ -102,9 +104,7 @@ function App() {
             Hot
           </label>
           <label
-            className="modal__input modal__label_type_radio"
-            htmlFor="warm"
-          >
+            className="modal__input modal__label_type_radio">
             <input
               type="radio"
               id="warm"
@@ -115,9 +115,7 @@ function App() {
             Warm
           </label>
           <label
-            className="modal__input modal__label_type_radio"
-            htmlFor="cold"
-          >
+            className="modal__input modal__label_type_radio">
             <input
               type="radio"
               id="cold"

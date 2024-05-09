@@ -1,16 +1,18 @@
+import React, { useState } from 'react';
 import "./Footer.css";
 import { footer } from "../../utils/constants";
 
 function Footer() {
+  const year = new Date().getFullYear();
     return (
-      <div className="footer">
+      <footer className="footer">
         <p className="footer__content">
           Developed by: {footer.developer}
         </p>
         <p className="footer__copyright">
-          {footer.year}
+          {year}
         </p>
-      </div>
+      </footer>
     );
 }
 

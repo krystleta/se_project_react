@@ -4,7 +4,7 @@ import ItemCard from "../ItemCard/ItemCard";
 import { defaultClothingItems } from "../../utils/constants";
 
 function Main({ weatherData, handleCardClick }) {
-//  console.log({"weatherdata": weatherData});
+ //console.log({"weatherdata": weatherData});
   return (
     <main className="main">
       <WeatherCard isDay="true" condition="rain" temperature={weatherData.temp.F} />

@@ -3,7 +3,7 @@ import "./ItemModal.css";
 function ItemModal({ name, activeModal, onClose, card }) {
   return (
     <div
-      className={`modal modal_type_${name} ${activeModal === "preview" ? "modal__opened" : ""}`}
+      className={`modal modal_type_${name} ${activeModal === "preview" ? "modal_opened" : ""}`}
       onClick={onClose}
     >
       <div
