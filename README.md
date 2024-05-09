@@ -18,3 +18,7 @@ The technologies and techniques used are React using hooks and working with the 
 **Link to the project**  
   
 * [Link to the project on Github](https://github.com/krystleta/se_project_react)  
+
+**NOTES**  
+
+* All tasks have been completed except the optional weather card functionality is not rendering weather cards dynamically based on the API response but rather hardcoded props being passed into WeatherCard.
