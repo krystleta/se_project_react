@@ -5,7 +5,7 @@ import Main from "../Main/Main";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import ItemModal from "../ItemModal/ItemModal";
 import Footer from "../Footer/Footer";
-import { getWeather, filterWeatherData } from "../../utils/weatherApi";
+import { getWeather } from "../../utils/weatherApi";
 import { coordinates, APIInfo } from "../../utils/constants";
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
     temp: { F: 999 },
     city: "",
   });
+
   const [activeModal, setActiveModal] = useState("");
   const [selectedCard, setSelectedCard] = useState({card: ""});
 
@@ -33,8 +34,7 @@ function App() {
   useEffect(() => {
     getWeather(coordinates, APIInfo.APIKey)
       .then((data) => {
-        const filteredData = filterWeatherData(data);
-        setWeatherData(filteredData);
+        setWeatherData(data);
       })
       .catch(console.error);
   }, []);

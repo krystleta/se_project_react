@@ -3,11 +3,14 @@ import { weatherCardImages } from "../../utils/constants";
 import { weatherCardImageLocation } from "../../utils/constants";
 
 const WeatherCard = ({ isDay, condition, temperature }) => {
-//const WeatherCard = ({ isDay="true", condition="clouds", temperature }) => {
 //const WeatherCard = ({ weatherData }) => {
   //console.log({"weatherdata": weatherData});
-  console.log({"condition": condition});
-  console.log({"isDay": isDay});
+  //console.log({"condition": condition});
+  //console.log({"isDay": isDay});
+
+  if (condition === undefined) {
+    return <div>Loading...</div>;
+  }
 
   const img_src = weatherCardImages.filter((i) => {
      return i.isDay === isDay && i.condition.toLowerCase() === condition.toLowerCase();
@@ -24,7 +27,5 @@ const WeatherCard = ({ isDay, condition, temperature }) => {
     </section>
   );
 }
-
-
 
 export default WeatherCard;

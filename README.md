@@ -1,8 +1,20 @@
 # Project 10: React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Overview  
 
-Currently, two official plugins are available:
+* Description 
+* Technologies and techniques  
+* Link to the project  
+  
+**Description**
+  
+Project 10 is now a new project using React + Vite. This is an application that displays weather information and recommended clothing based on the weather conditions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Technologies and  techniques**  
+  
+The technologies and techniques used are React using hooks and working with the concept of functional components.
+
+  
+**Link to the project**  
+  
+* [Link to the project on Github](https://github.com/krystleta/se_project_react)  

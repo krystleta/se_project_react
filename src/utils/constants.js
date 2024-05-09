@@ -40,10 +40,10 @@ export const defaultClothingItems = [
 export const coordinates = {
     //latitude: "39.184158",
     //longitude: "-106.816238",
-    //wellington: latitude: "-41.286461",
-    //longitude: "174.776230",
-    latitude: "14.599512",
-    longitude: "120.984222",
+    latitude: "-41.286461",
+    longitude: "174.776230",
+    //latitude: "14.599512",
+    //longitude: "120.984222",
   }
 
 export const APIInfo = {

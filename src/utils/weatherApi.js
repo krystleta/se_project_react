@@ -8,12 +8,16 @@ function checkResponse(res) {
 }
 
 export const getWeather = ({ latitude, longitude }, APIKey) => {
-  return fetch(
+  const weatherAPI = fetch(
     `${APIInfo.APIBaseURL}?lat=${latitude}&lon=${longitude}&units=imperial&appid=${APIKey}`
   ).then((res) => {
     return checkResponse(res);
+  }).then((data) => {
+    return filterWeatherData(data);
   });
+  return weatherAPI;
 };
+
 
 export const filterWeatherData = (data) => {
   const result = {};
