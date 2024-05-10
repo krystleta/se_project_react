@@ -1,29 +1,35 @@
 import "./WeatherCard.css";
-import { weatherCardImages } from "../../utils/constants";
-import { weatherCardImageLocation } from "../../utils/constants";
+import { weatherCardOptions, deafultWeatherCardOptions } from "../../utils/constants";
 
-const WeatherCard = ({ isDay, condition, temperature }) => {
-//const WeatherCard = ({ weatherData }) => {
+const WeatherCard = ({ weatherData }) => {
   //console.log({"weatherdata": weatherData});
-  //console.log({"condition": condition});
+  //console.log({"condition": weatherData.condition});
   //console.log({"isDay": isDay});
 
-  if (condition === undefined) {
-    return <div>Loading...</div>;
-  }
 
-  const img_src = weatherCardImages.filter((i) => {
-     return i.isDay === isDay && i.condition.toLowerCase() === condition.toLowerCase();
-  });
+   const filteredOptions = weatherCardOptions.filter((option) => {
+      return (
+        option.isDay === weatherData.isDay &&
+        option.condition.toLowerCase() === weatherData.condition.toLowerCase()
+      );
+   });
 
-   const img_path = img_src[0].img_filename || "";
+   let weatherOption;
+   if (filteredOptions.length === 0) {
+    weatherOption = deafultWeatherCardOptions[weatherData.isDay ? "day" : "night"];
+   } else {
+    weatherOption = filteredOptions[0];
+   }
+
+
+//console.log({"weatherOption": weatherOption});
 
   return (
     <section className="weather-card">
       <p className="weather-card__temp">
-        {temperature} &deg; F
+        {weatherData.temp.F} &deg; F
       </p>
-      <img src={weatherCardImageLocation + img_path} alt={condition} className="weather-card__image" />
+      <img src={weatherOption?.url} alt={`${weatherOption?.condition}`} className="weather-card__image" />
     </section>
   );
 }

@@ -56,67 +56,74 @@ export const footer = {
   year: "2024",
 }
 
-export const weatherCardImageLocation = "../src/assets/weathercard/";
-
-export const weatherCardImages = [
+export const weatherCardOptions = [
   {
     condition: "Clear",
     isDay: "true",
-    img_filename: "day-sunny.svg",
+    url: new URL("../assets/weathercard/day/day-sunny.svg", import.meta.url).href,
   },
   {
     condition: "Clouds",
     isDay: "true",
-    img_filename: "day-cloudy.svg",
+    url: new URL("../assets/weathercard/day/day-cloudy.svg", import.meta.url).href,
   },
   {
     condition: "Rain",
     isDay: "true",
-    img_filename: "day-rain.svg",
+    url: new URL("../assets/weathercard/day/day-rain.svg", import.meta.url).href,
   },
   {
     condition: "Thunderstorm",
     isDay: "true",
-    img_filename: "day-storm.svg",
+    url: new URL("../assets/weathercard/day/day-storm.svg", import.meta.url).href,
   },
   {
     condition: "Snow",
     isDay: "true",
-    img_filename: "day-snow.svg",
+    url: new URL("../assets/weathercard/day/day-snow.svg", import.meta.url).href,
   },
   {
     condition: "Fog",
     isDay: "true",
-    img_filename: "day-fog.svg",
+    url: new URL("../assets/weathercard/day/day-fog.svg", import.meta.url).href,
   },
   {
     condition: "Clear",
     isDay: "false",
-    img_filename: "night-sunny.svg",
+    url: new URL("../assets/weathercard/night/night-sunny.svg", import.meta.url).href,
   },
   {
     condition: "Clouds",
     isDay: "false",
-    img_filename: "night-cloudy.svg",
+    url: new URL("../assets/weathercard/night/night-cloudy.svg", import.meta.url).href,
   },
   {
     condition: "Rain",
     isDay: "false",
-    img_filename: "night-rain.svg",
+    url: new URL("../assets/weathercard/night/night-rain.svg", import.meta.url).href,
   },
   {
     condition: "Thunderstorm",
     isDay: "false",
-    img_filename: "night-storm.svg",
+    url: new URL("../assets/weathercard/night/night-storm.svg", import.meta.url).href,
   },
   {
     condition: "Snow",
     isDay: "false",
-    img_filename: "night-snow.svg",
+    url: new URL("../assets/weathercard/night/night-snow.svg", import.meta.url).href,
   },
   {
     condition: "Fog",
     isDay: "false",
-    img_filename: "night-fog.svg",
+    url: new URL("../assets/weathercard/night/night-fog.svg", import.meta.url).href,
   },
 ]
+
+export const deafultWeatherCardOptions = {
+  day: {
+    url: new URL("../assets/weathercard/day/default.svg", import.meta.url).href,
+  },
+  night: {
+    url: new URL("../assets/weathercard/night/default.svg", import.meta.url).href,
+  },
+}
