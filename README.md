@@ -1,4 +1,4 @@
-# Project 10: React + Vite
+# Project 11: React + Vite
 
 ### Overview  
 
@@ -8,11 +8,11 @@
   
 **Description**
   
-Project 10 is now a new project using React + Vite. This is an application that displays weather information and recommended clothing based on the weather conditions.
+Project 11 includes additional functionality where a user can create a new clothing item and specify the weather it is best suited for. A user may also delete an item. 
 
 **Technologies and  techniques**  
   
-The technologies and techniques used are React using hooks and working with the concept of functional components.
+The additional technologies and techniques used are Routes and Links for navigation. We are also using a mock DB so we are now making API calls to add and remove clothing items.
 
   
 **Link to the project**  
@@ -21,4 +21,4 @@ The technologies and techniques used are React using hooks and working with the 
 
 **NOTES**  
 
-* All tasks have been completed except the optional weather card functionality is not rendering weather cards dynamically based on the API response but rather hardcoded props being passed into WeatherCard.
+* All tasks have been completed except full validation. Some styling features have not been completed such as the animation for toggle switch and the logic to disable/enable the "Add garment" button.

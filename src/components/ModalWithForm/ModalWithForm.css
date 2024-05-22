@@ -27,6 +27,7 @@
   max-width: 496px;
   box-sizing: border-box;
   width: 100%;
+  font-size: 16px;
 }
 
 .modal__close {
@@ -65,7 +66,6 @@
   border: none;
   border-bottom: 1px solid rgba(0,0,0);
   padding-bottom: 8px;
-  font-size: 14px;
   line-height: 1.2;
   margin-bottom: 24px;
   width: 100%;
@@ -74,7 +74,7 @@
 .modal__form .modal__button {
   width: 124px;
   height: 36px;
-  background-color: rgba(0,0,0, 0.3);
+  background-color: rgba(0,0,0);
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -82,6 +82,10 @@
   font-weight: 700;
   line-height: 1.2;
   cursor: pointer;
+}
+
+.modal__form .modal__button:hover {
+  background-color: rgba(0,0,0, 0.6);
 }
 
 ::placeholder {
@@ -106,4 +110,16 @@
   border-bottom: none;
   margin-bottom: 8px;
   padding: 0;
+  font-size: 16px;
+  /*color: rgba(0,0,0, 0.5);*/
+}
+
+.modal__radio-input {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+label:has(input:checked) {
+  color: #000000;
 }
