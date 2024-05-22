@@ -109,10 +109,22 @@
       "_id": 17
     },
     {
-      "name": "Bag 2",
+      "name": "Bag",
       "imageUrl": "https://images.unsplash.com/photo-1572196284554-4e321b0e7e0b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJhZ3xlbnwwfHwwfHx8MA%3D%3D",
       "weather": "Cold",
-      "_id": 18
+      "_id": 19
+    },
+    {
+      "name": "Gloves",
+      "imageUrl": "https://images.unsplash.com/photo-1617118602199-d3c05ae37ed8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Z2xvdmVzfGVufDB8fDB8fHww",
+      "weather": "Cold",
+      "_id": 20
+    },
+    {
+      "name": "Coat",
+      "imageUrl": "https://plus.unsplash.com/premium_photo-1674719144570-0728faf14f96?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNvYXR8ZW58MHx8MHx8fDA%3D",
+      "weather": "Cold",
+      "_id": 21
     }
   ]
 }

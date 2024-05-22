@@ -39,7 +39,7 @@ function App() {
   const handleAddItem = (item) => {
     addNewItem(item)
       .then((newItem) => {
-        setClothingItems([...clothingItems, newItem]);
+        setClothingItems([newItem, ...clothingItems]);
         closeActiveModal();
       })
       .catch((error) => {
@@ -64,8 +64,7 @@ function App() {
   };
 
   const handleToggleSwitchChange = () => {
-    if (currentTemperatureUnit === "C") setCurrentTemperatureUnit("F");
-    if (currentTemperatureUnit === "F") setCurrentTemperatureUnit("C");
+    setCurrentTemperatureUnit(currentTemperatureUnit === "F" ? "C" : "F");
   };
 
   useEffect(() => {
@@ -75,8 +74,8 @@ function App() {
       })
       .catch(console.error);
     getItems()
-      .then((item) => {
-        setClothingItems(item);
+      .then((items) => {
+        setClothingItems(items);
       })
       .catch(console.error);
   }, []);

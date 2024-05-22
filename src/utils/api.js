@@ -2,7 +2,7 @@ const baseURL = "http://localhost:3001";
 
 function getItems() {
   return fetch(`${baseURL}/items`).then((res) => {
-    return _checkResponse(res);
+    return checkResponse(res);
   });
 }
 
@@ -18,7 +18,7 @@ function addNewItem({name, imageUrl, weather}) {
       weather,
   }),
   }).then((res) => {
-    return _checkResponse(res);
+    return checkResponse(res);
   });
 }
 
@@ -26,15 +26,15 @@ function deleteItem(_id) {
   return fetch(`${baseURL}/items/${_id}`, {
     method: "DELETE",
   }).then((res) => {
-    return _checkResponse(res);
+    return checkResponse(res);
   });
 }
 
-function _checkResponse(res) {
+function checkResponse(res) {
   if (res.ok) {
     return res.json();
   }
   return Promise.reject(`Error: ${res.status}`);
 }
 
-export { getItems, addNewItem, deleteItem };
+export { getItems, addNewItem, deleteItem, checkResponse };
