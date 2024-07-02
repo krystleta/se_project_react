@@ -6,9 +6,10 @@ function ModalWithForm({
   buttonText,
   children,
   activeModal,
-  isOpen,
+  spanText,
   onClose,
   onSubmit,
+  orModal,
 }) {
   return (
     <div
@@ -26,10 +27,13 @@ function ModalWithForm({
           name={name}
           onSubmit={onSubmit}
         >
-          {children }
-          <button className="modal__button" type="submit">
-            {buttonText}
-          </button>
+          {children}
+          <div className="modal__button-group">
+            <button className="modal__button">{buttonText}</button>
+            <button className="modal__button-span" onClick={orModal}>
+              {spanText}
+            </button>
+          </div>
         </form>
       </div>
     </div>

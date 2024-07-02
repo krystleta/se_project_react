@@ -3,12 +3,12 @@
 }
 
 .profile__sidebar {
-  margin: 4px 0;
+  margin: 4px 116px 0 0;
   width: 229px;
   height: 56px;
 }
 
 .profile__clothing-items {
   max-width: 1015px;
-  margin: 0px 0px 0 auto;
+  margin: 0px;
 }

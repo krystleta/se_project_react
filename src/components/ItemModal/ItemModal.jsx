@@ -1,9 +1,19 @@
 import "./ItemModal.css";
+import { CurrentUserContext } from "../../contexts/CurrentUserContext";
+import { useContext } from "react";
 
 function ItemModal({ name, activeModal, onClose, card, onClickDelete }) {
   const handleCardDelete = () => {
     onClickDelete(card);
   }
+
+  const { currentUser } = useContext(CurrentUserContext);
+
+  const isOwn = card.owner === currentUser._id;
+  const itemDeleteButtonClassName = (
+    `modal__delete ${isOwn ? 'modal__delete' : 'modal__delete_hidden'}`
+  );
+
   return (
     <div
       className={`modal modal_type_${name} ${
@@ -25,7 +35,7 @@ function ItemModal({ name, activeModal, onClose, card, onClickDelete }) {
             <h2 className="modal__caption">{card.name}</h2>
             <p className="modal__weather">Weather: {card.weather}</p>
           </div>
-          <p className="modal__delete" onClick={handleCardDelete} >Delete item</p>
+          <p className={itemDeleteButtonClassName} onClick={handleCardDelete} >Delete item</p>
         </div>
       </div>
     </div>

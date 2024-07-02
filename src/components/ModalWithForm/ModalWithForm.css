@@ -123,3 +123,21 @@
 label:has(input:checked) {
   color: #000000;
 }
+
+.modal__button-group {
+  display: flex;
+  flex-direction: row;
+}
+
+.modal__form .modal__button-span {
+  margin: 0 20px;
+  font-family: 'CabinetGrotesk', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  background: transparent;
+  color: rgba(0,0,0, 0.5);
+}

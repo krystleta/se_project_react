@@ -1,15 +1,32 @@
-.sidebar {
+.sidebar__user-container, .sidebar__nav {
   display: flex;
-  align-items: flex-start;
 }
 
 .sidebar__avatar {
   width: 56px;
   height: 56px;
+  border-radius: 30px;
+  border: 1px solid rgba(0,0,0, 0.5);
 }
 
 .sidebar__username {
   margin: 16px 0 15px 16px;
   font-size: 20px;
   font-weight: 700;
+}
+
+.sidebar__links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.sidebar__nav-link {
+  margin: 16px 0 0 0;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }

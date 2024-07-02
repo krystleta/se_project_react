@@ -14,7 +14,7 @@
     margin-right: 24px;
 }
 
-.header__add-clothes-button {
+.header__add-clothes-button, .header__signup-button {
     margin: 0 20px;
     font-family: 'CabinetGrotesk', Arial, sans-serif;
     font-weight: 700;
@@ -42,4 +42,11 @@
 .header__user-link {
   text-decoration: none;
   color: #000000;
+}
+
+.header__avatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 25px;
+  border: 1px solid rgba(0,0,0, 0.5);
 }
