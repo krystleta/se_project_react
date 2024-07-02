@@ -1,34 +1,22 @@
 import React, { useEffect, useState } from "react";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
+import { useForm } from "../../hooks/useForm";
 
 const SignUpModal = ({ closeActiveModal, handleSignUp, isOpen, handleLoginModal }) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [formData, setFormData] = useState({
+  const { formData, handleChange, setFormData } = useForm({
     email: "",
     password: "",
     name: "",
     avatar: "",
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
-
   useEffect(() => {
     if (isOpen === true && isSubmitted) {
-      setFormData({
-        email: "",
-        password: "",
-        name: "",
-        avatar: "",
-      });
+      setFormData({ email: "", password: "", name: "", avatar: "" });
       setIsSubmitted(false);
     }
-  }, [isOpen]);
+  }, [isOpen, setFormData]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
