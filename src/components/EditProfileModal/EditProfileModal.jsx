@@ -19,7 +19,6 @@ const EditProfileModal = ({ closeActiveModal, handleEditProfile, isOpen }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     handleEditProfile({name, avatar});
-    setIsSubmitted(true);
   };
 
   return (
