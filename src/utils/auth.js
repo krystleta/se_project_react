@@ -1,7 +1,8 @@
-import { baseURL, checkResponse } from "../utils/api";
+import { checkResponse }  from "../utils/api";
+import { BASE_URL } from "../utils/constants";
 
 export const register = ({name, avatar, email, password}) => {
-  return fetch(`${baseURL}/signup`, {
+  return fetch(`${BASE_URL}/signup`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -14,7 +15,7 @@ export const register = ({name, avatar, email, password}) => {
 };
 
 export const signIn = ({email, password}) => {
-    return fetch(`${baseURL}/signin`, {
+    return fetch(`${BASE_URL}/signin`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -26,7 +27,7 @@ export const signIn = ({email, password}) => {
   };
 
   export const editProfile = ({name, avatar}, token) => {
-    return fetch(`${baseURL}/users/me`, {
+    return fetch(`${BASE_URL}/users/me`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -39,7 +40,7 @@ export const signIn = ({email, password}) => {
   };
 
   export const checkToken = (token) => {
-    return fetch(`${baseURL}/users/me`, {
+    return fetch(`${BASE_URL}/users/me`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

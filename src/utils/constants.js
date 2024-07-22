@@ -7,6 +7,10 @@ export const coordinates = {
     //longitude: "120.984222",
   }
 
+export const BASE_URL = process.env.NODE_ENV === "production"
+? "https://api.wtwrkt.jumpingcrab.com"
+: "http://localhost:3001";
+
 export const APIInfo = {
     APIKey: "efe74da150a7616e5a53f66fc7250276",
     APIBaseURL: "https://api.openweathermap.org/data/2.5/weather",
@@ -88,3 +92,4 @@ export const deafultWeatherCardOptions = {
     url: new URL("../assets/weathercard/night/default.svg", import.meta.url).href,
   },
 }
+

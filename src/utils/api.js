@@ -1,13 +1,13 @@
-export const baseURL = "http://localhost:3001";
+import { BASE_URL } from "../utils/constants";
 
 function getItems() {
-  return fetch(`${baseURL}/items`).then((res) => {
+  return fetch(`${BASE_URL}/items`).then((res) => {
     return checkResponse(res);
   });
 }
 
 function addNewItem({name, imageUrl, weather}, token) {
-  return fetch(`${baseURL}/items`, {
+  return fetch(`${BASE_URL}/items`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -24,7 +24,7 @@ function addNewItem({name, imageUrl, weather}, token) {
 }
 
 function deleteItem(_id, token) {
-  return fetch(`${baseURL}/items/${_id}`, {
+  return fetch(`${BASE_URL}/items/${_id}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
@@ -36,7 +36,7 @@ function deleteItem(_id, token) {
 }
 
 function addCardLike(_id, token) {
-  return fetch(`${baseURL}/items/${_id}/likes`, {
+  return fetch(`${BASE_URL}/items/${_id}/likes`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -48,7 +48,7 @@ function addCardLike(_id, token) {
 }
 
 function removeCardLike(_id, token) {
-  return fetch(`${baseURL}/items/${_id}/likes`, {
+  return fetch(`${BASE_URL}/items/${_id}/likes`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
